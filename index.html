@@ -1,77 +1,162 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlackSource</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    <meta name="description" content="تیم تحقیق و توسعه امنیت سایبری منبع سیاه - ارائه دهنده خدمات تخصصی امنیت سیستم، نرم افزار و تحلیل داده.">
+    <meta name="keywords" content="امنیت سایبری, منبع سیاه, BlackSource, هک و امنیت, تحلیل بدافزار, امنیت داده, برنامه نویسی">
+    <title>منبع سیاه - تحقیق و توسعه امنیت سایبری</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            text-align: center;
-        }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        .container {
-            max-width: 800px;
-            background-color: #1e1e1e;
-            border-radius: 16px;
-            padding: 40px 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #00bcd4;
-        }
-
-        a {
-            display: inline-block;
-            margin-top: 10px;
-            text-decoration: none;
-            color: #ffffff;
-            background-color: #00bcd4;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        a:hover {
-            background-color: #0097a7;
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            a {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>To place an order, please contact us on Telegram</h1>
-        <a href="https://t.me/BlackSource_tech" target="_blank">t.me/BlackSource_tech</a>
-    </div>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">منبع سیاه <span class="logo-en">BlackSource</span></a>
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <ul>
+                    <li><a href="index.html" class="active">صفحه اصلی</a></li>
+                    <li><a href="about.html">درباره ما</a></li>
+                    <li><a href="services.html">خدمات</a></li>
+                    <li><a href="blog.html">وبلاگ</a></li>
+                    <li><a href="contact.html">تماس با ما</a></li>
+                </ul>
+            </nav>
+            <a href="#donate-link-placeholder" class="btn btn-donate">حمایت مالی <i class="fas fa-heart"></i></a>
+            </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>پیشگام در امنیت سایبری و توسعه نوآورانه</h1>
+                <p class="subtitle">تیم منبع سیاه، متخصص در ارائه راهکارهای پیشرفته امنیت سیستم، نرم‌افزار و تحلیل داده برای حفاظت از دارایی‌های دیجیتال شما.</p>
+                <a href="services.html" class="btn btn-primary">خدمات ما را بشناسید</a>
+                <a href="contact.html" class="btn btn-secondary">ارتباط با متخصصین</a>
+            </div>
+        </section>
+
+        <section id="intro" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">ما که هستیم؟</h2>
+                <p class="section-intro-text">
+                    ما یک تیم غیر رسمی متشکل از ۵ متخصص علاقه‌مند (سه آقا و دو خانم) در حوزه تحقیق و توسعه امنیت سایبری هستیم. فعالیت اصلی ما بر امنیت سیستم‌ها و نرم‌افزارها، با تمرکز ویژه بر تحلیل امنیت داده و مقابله با بدافزارها و باج‌افزارها متمرکز است. همچنین، اعضای تیم به صورت فریلنسر در پروژه‌های متنوعی خارج از چارچوب تیم نیز فعالیت دارند.
+                </p>
+                 <a href="about.html" class="btn btn-outline">بیشتر درباره ما</a>
+            </div>
+        </section>
+
+
+        <section id="services-preview" class="section-padding bg-darker">
+            <div class="container">
+                <h2 class="section-title">نگاهی به خدمات ما</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fas fa-shield-halved icon"></i>
+                        <h3>امنیت سیستم و شبکه</h3>
+                        <p>ارزیابی امنیتی، تست نفوذ و مقاوم‌سازی زیرساخت‌های شما.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-code icon"></i>
+                        <h3>امنیت نرم‌افزار</h3>
+                        <p>بررسی امنیتی کد، شناسایی آسیب‌پذیری‌ها و ارائه راهکارهای امنیتی در چرخه توسعه.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-database icon"></i>
+                        <h3>تحلیل امنیت داده</h3>
+                        <p>محافظت از داده‌های حساس، تحلیل ریسک و پیاده‌سازی استراتژی‌های امنیتی داده‌محور.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-bug icon"></i>
+                        <h3>مقابله با بدافزار</h3>
+                        <p>تحلیل بدافزار، مهندسی معکوس و ارائه راهکارهای پیشگیری و پاکسازی.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                     <a href="services.html" class="btn btn-primary">مشاهده تمام خدمات</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-us" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">چرا منبع سیاه؟</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-users-cog icon-feature"></i>
+                        <h4>تیم متخصص و باتجربه</h4>
+                        <p>متشکل از افرادی با دانش فنی عمیق و تجربه عملی در پروژه‌های واقعی امنیت سایبری.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-lightbulb icon-feature"></i>
+                        <h4>رویکرد نوآورانه</h4>
+                        <p>استفاده از جدیدترین متدولوژی‌ها و ابزارها برای ارائه راهکارهای خلاقانه و مؤثر.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-handshake icon-feature"></i>
+                        <h4>تعهد به کیفیت</h4>
+                        <p>تمرکز بر ارائه خدمات با بالاترین استانداردها و جلب رضایت کامل شما.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-blog" class="section-padding bg-darker">
+            <div class="container text-center">
+                <h2 class="section-title">آخرین تحلیل‌ها و مقالات ما</h2>
+                <p>از وبلاگ ما دیدن کنید تا از آخرین یافته‌ها و نکات امنیتی مطلع شوید.</p>
+                <a href="blog.html" class="btn btn-primary">ورود به وبلاگ</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h4>منبع سیاه (BlackSource)</h4>
+                    <p>تیم تحقیق و توسعه امنیت سایبری. هدف ما ایجاد فضایی امن‌تر در دنیای دیجیتال است.</p>
+                    <p>شماره ثبت مجوز: I234966 (وزارت کار، تعاون و رفاه اجتماعی)</p>
+                </div>
+                <div class="footer-links">
+                    <h4>لینک‌های مفید</h4>
+                    <ul>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="services.html">خدمات</a></li>
+                        <li><a href="blog.html">وبلاگ</a></li>
+                        <li><a href="contact.html">تماس با ما</a></li>
+                        <li><a href="#donate-link-placeholder">حمایت مالی</a></li>
+                         </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>ارتباط با ما</h4>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+989117335899" dir="ltr">+۹۸ ۹۱۱ ۷۳۳ ۵۸۹۹</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:support@blacksource.tech">support@blacksource.tech</a></p>
+                    <div class="social-icons">
+                        <a href="https://t.me/BlackSource_tech" target="_blank" aria-label="تلگرام"><i class="fab fa-telegram"></i></a>
+                        <a href="https://instagram.com/BlackSource.tech" target="_blank" aria-label="اینستاگرام"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/BlackSourceTM" target="_blank" aria-label="گیت‌هاب"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; تمام حقوق مادی و معنوی این سایت و متعلقات آن برای تیم تحقیق و توسعه امنیت سایبری منبع سیاه محفوظ است. (کپی با ذکر منبع مانعی ندارد)</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="بازگشت به بالا"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
 </body>
 </html>
