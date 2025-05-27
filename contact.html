@@ -72,28 +72,41 @@
 
                     <div class="contact-form-section" style="margin-top: 50px;">
                         <h3 class="section-title-small text-center">فرم ارسال پیام</h3>
-                        <form action="https://formsubmit.io/send/support@blacksource.tech" method="POST" id="contact-form" style="max-width: 750px; margin: 30px auto; background-color: var(--card-bg); padding: 30px 35px; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <form action="https://formspree.io/f/mdkgrrye" method="POST" id="contact-form" style="max-width: 750px; margin: 30px auto; background-color: var(--card-bg); padding: 30px 35px; border-radius: 8px; border: 1px solid var(--border-color);">
+    
+                            <!-- نام -->
                             <div class="form-group" style="margin-bottom: 20px;">
                                 <label for="name" style="display: block; margin-bottom: 8px; color: var(--light-text); font-weight: 500;">نام شما:</label>
                                 <input type="text" id="name" name="name" required placeholder="مثال: علی رضایی" style="width: 100%; padding: 12px 15px; border-radius: 5px; border: 1px solid var(--border-color); background-color: var(--darker-bg); color: var(--light-text); font-family: var(--font-family-persian); font-size: 0.95rem;">
                             </div>
+                        
+                            <!-- ایمیل -->
                             <div class="form-group" style="margin-bottom: 20px;">
                                 <label for="email" style="display: block; margin-bottom: 8px; color: var(--light-text); font-weight: 500;">ایمیل شما:</label>
                                 <input type="email" id="email" name="email" required placeholder="example@domain.com" style="width: 100%; padding: 12px 15px; border-radius: 5px; border: 1px solid var(--border-color); background-color: var(--darker-bg); color: var(--light-text); font-family: var(--font-family-english); text-align:left; direction:ltr; font-size: 0.95rem;">
                             </div>
+                        
+                            <!-- موضوع -->
                             <div class="form-group" style="margin-bottom: 20px;">
                                 <label for="subject" style="display: block; margin-bottom: 8px; color: var(--light-text); font-weight: 500;">موضوع پیام:</label>
                                 <input type="text" id="subject" name="subject" required placeholder="موضوع پیام خود را بنویسید" style="width: 100%; padding: 12px 15px; border-radius: 5px; border: 1px solid var(--border-color); background-color: var(--darker-bg); color: var(--light-text); font-family: var(--font-family-persian); font-size: 0.95rem;">
                             </div>
+                        
+                            <!-- متن پیام -->
                             <div class="form-group" style="margin-bottom: 25px;">
                                 <label for="message" style="display: block; margin-bottom: 8px; color: var(--light-text); font-weight: 500;">متن پیام:</label>
                                 <textarea id="message" name="message" rows="7" required placeholder="پیام خود را در اینجا بنویسید..." style="width: 100%; padding: 12px 15px; border-radius: 5px; border: 1px solid var(--border-color); background-color: var(--darker-bg); color: var(--light-text); font-family: var(--font-family-persian); line-height: var(--line-height-base); font-size: 0.95rem; resize: vertical;"></textarea>
                             </div>
-
+                        
+                            <!-- هدایت پس از موفقیت -->
                             <input type="hidden" name="_redirect" value="https://blacksource.tech/contact.html?success=true">
-
+                        
+                            <!-- جلوگیری از اسپم رباتی -->
                             <input type="text" name="_formsubmit_id" style="display:none">
-
+                        
+                            <!-- غیرفعال‌کردن کپچا (اختیاری ولی توصیه‌شده) -->
+                            <input type="hidden" name="_captcha" value="false">
+                        
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary" style="padding: 12px 35px; font-size: 1.05rem;">ارسال پیام <i class="fas fa-paper-plane" style="margin-right: 7px;"></i></button>
                             </div>
