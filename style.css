@@ -545,3 +545,577 @@ footer {
     #hero h1 { font-size: 2rem; }
     header .logo { font-size: 1.5rem; }
 }
+
+/* =============================================== */
+/* Styles for About Us Page (about.html)        */
+/* =============================================== */
+
+/* Page Header for inner pages like About Us */
+#page-header {
+    background-color: var(--darker-bg); /* یا هر رنگ/تصویر پس‌زمینه دیگر */
+    padding: 70px 0; /* همانند var(--section-padding) یا کمی بیشتر/کمتر */
+    text-align: center;
+}
+
+#page-header h1 {
+    color: var(--primary-color); /* یا #fff اگر شبیه هیرو اصلی باشد */
+    margin-bottom: 0.5rem;
+}
+
+/* .subtitle class is already defined and can be used here */
+
+/* About Content Section */
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* متن اصلی دو سوم، سایدبار یک سوم */
+    gap: 40px; /* فاصله بین متن و سایدبار */
+}
+
+.about-text p {
+    text-align: justify;
+    color: var(--light-text); /* متن اصلی کمی روشن‌تر از var(--gray-text) برای خوانایی بهتر */
+}
+
+.about-text strong {
+    color: var(--primary-color);
+}
+
+.about-text .logo-en { /* For BlackSource in English text */
+    font-family: var(--font-family-english);
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.section-title-small {
+    font-size: 1.9rem; /* کمی کوچکتر از h2 معمولی */
+    color: var(--light-text);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block; /* برای اینکه خط زیرین فقط به اندازه متن باشد */
+}
+.section-title-small:not(:first-child) {
+    margin-top: 30px; /* برای فاصله از پاراگراف قبلی اگر اولین عنوان کوچک نیست */
+}
+
+
+/* Styled List for services/features in about text */
+.styled-list {
+    list-style: none;
+    padding-right: 0; /* حذف پدینگ پیشفرض لیست در حالت RTL */
+    margin-bottom: 1.5rem;
+}
+
+.styled-list li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: flex-start; /* هم‌ترازی آیکون و متن */
+    color: var(--gray-text);
+}
+
+.icon-list {
+    color: var(--primary-color);
+    margin-left: 12px; /* فاصله آیکون از متن در RTL */
+    margin-top: 5px;   /* تنظیم دقیق‌تر عمودی آیکون */
+    font-size: 1.1em;
+    width: 20px; /* برای هم‌ترازی بهتر اگر آیکون‌ها عرض متفاوتی دارند */
+    text-align: center;
+}
+
+/* Sidebar */
+.about-sidebar .sidebar-widget {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.about-sidebar .sidebar-widget h3 {
+    font-size: 1.5rem; /* عنوان ویجت */
+    color: var(--light-text);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.contact-details-list {
+    list-style: none;
+    padding-right: 0;
+}
+
+.contact-details-list li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    color: var(--gray-text);
+}
+.contact-details-list li a {
+    color: var(--gray-text);
+}
+.contact-details-list li a:hover {
+    color: var(--primary-color);
+}
+
+
+.icon-contact {
+    color: var(--primary-color);
+    margin-left: 10px; /* فاصله آیکون از متن در RTL */
+    font-size: 1.1rem;
+    width: 20px; /* برای هم‌ترازی بهتر */
+}
+
+/* Social Icons in Sidebar (if styling needs to be different from footer) */
+.social-icons-about {
+    margin-top: 15px;
+    text-align: right; /* یا center اگر مایلید */
+}
+.social-icons-about a {
+    color: var(--gray-text);
+    font-size: 1.6rem; /* کمی بزرگتر برای تاکید بیشتر در سایدبار */
+    margin-left: 18px; /* فاصله بین آیکون‌ها در RTL */
+    transition: color 0.3s ease;
+}
+.social-icons-about a:last-child {
+    margin-left: 0;
+}
+.social-icons-about a:hover {
+    color: var(--primary-color);
+}
+
+/* Utility classes (add if not already present or adjust as needed) */
+.margin-top-large {
+    margin-top: 40px !important; /* Use !important if overriding other margins is necessary */
+}
+.margin-top-medium {
+    margin-top: 20px !important;
+}
+
+.btn-fullwidth {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    color: var(--gray-text);
+    line-height: 1.5;
+}
+
+/* Team Preview Section (placeholder styles) */
+#team-preview .section-intro-text { /* Re-using existing class if appropriate */
+    color: var(--light-text); /* Ensure good contrast on bg-darker */
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member {
+    background-color: var(--card-bg); /* Using var(--card-bg) from your style.css */
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,199,199,0.08);
+}
+
+.team-member-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px auto; /* Center image */
+    border: 3px solid var(--primary-color);
+    display: block;
+}
+
+.team-member h4 {
+    color: var(--light-text);
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+.team-member p {
+    font-size: 0.95rem;
+    color: var(--gray-text);
+}
+
+
+/* Responsive adjustments for About Page */
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr; /* ستون‌ها روی هم در تبلت و موبایل */
+    }
+    .about-sidebar {
+        margin-top: 40px; /* فاصله سایدبار از متن اصلی در حالت تک ستونه */
+    }
+    #page-header {
+        padding: 50px 0;
+    }
+    #page-header h1 {
+        font-size: 2.2rem; /* Adjust as per existing h1 in this breakpoint */
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title-small {
+        font-size: 1.7rem;
+    }
+    .about-sidebar .sidebar-widget h3 {
+        font-size: 1.4rem;
+    }
+    .social-icons-about a {
+        font-size: 1.5rem;
+        margin-left: 15px;
+    }
+    .team-member-img {
+        width: 110px;
+        height: 110px;
+    }
+}
+/* =============================================== */
+/* Styles for Services Page (services.html)     */
+/* =============================================== */
+
+#services-detailed .services-detailed-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */ /* برای نمایش کنار هم در صفحات بزرگتر */
+    grid-template-columns: 1fr; /* هر سرویس در یک ردیف برای تمرکز بیشتر */
+    gap: 40px; /* فاصله بین بلوک های خدمات */
+}
+
+.service-detail-item {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* برای چیدمان داخلی */
+}
+
+.service-detail-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,199,199,0.08);
+}
+
+.service-item-icon {
+    font-size: 3.5rem; /* اندازه بزرگتر آیکون */
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center; /* یا راست چین اگر مایلید: text-align: right; */
+}
+
+.service-item-title {
+    font-size: 1.8rem; /* عنوان هر سرویس */
+    color: var(--light-text);
+    margin-bottom: 15px;
+    text-align: center; /* یا راست چین */
+}
+
+.service-item-description {
+    font-size: 1rem;
+    color: var(--gray-text);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.service-detail-item h4 {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.service-features-list {
+    list-style: none;
+    padding-right: 0;
+    margin-bottom: 20px;
+}
+
+.service-features-list li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    color: var(--gray-text);
+    font-size: 0.95rem;
+}
+
+.feature-icon { /* آیکون کنار ویژگی های لیست */
+    color: var(--secondary-color); /* یا --primary-color */
+    margin-left: 10px; /* فاصله آیکون از متن در RTL */
+    font-size: 1em;
+}
+
+.btn-small { /* برای دکمه‌های کوچکتر در کارت‌ها */
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+
+/* Call to Action section for services page */
+#services-cta .section-title {
+    color: var(--light-text); /* برای خوانایی بهتر روی پس‌زمینه تیره‌تر */
+}
+#services-cta .section-title::after{
+    background-color: var(--light-text); /* یا --primary-color */
+}
+
+/* Responsive adjustments for Services Page */
+@media (min-width: 769px) and (max-width: 1100px) {
+    #services-detailed .services-detailed-grid {
+        /* اگر بخواهید در تبلت دو ستونه شود: */
+        /* grid-template-columns: repeat(2, 1fr); */
+    }
+}
+
+@media (min-width: 1101px) {
+     #services-detailed .services-detailed-grid {
+        /* برای نمایش دو ستونه در دسکتاپ اگر محتوا خیلی طولانی نیست */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .service-detail-item {
+         padding: 25px;
+    }
+}
+/* =============================================== */
+/* Styles for Blog Page (blog.html)             */
+/* =============================================== */
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* تک ستونه در موبایل */
+    gap: 35px;
+}
+
+.blog-post-item {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden; /* برای اینکه border-radius روی تصویر هم اعمال شود */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,199,199,0.07);
+}
+
+.post-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* برای حفظ نسبت تصویر */
+    overflow: hidden;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* تصویر کامل کادر را بپوشاند بدون تغییر نسبت */
+    transition: transform 0.4s ease;
+}
+
+.blog-post-item:hover .post-thumbnail img {
+    transform: scale(1.05); /* افکت زوم کوچک روی هاور */
+}
+
+.post-content {
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* محتوا فضای باقی‌مانده کارت را پر کند */
+}
+
+.post-meta {
+    font-size: 0.85rem;
+    color: var(--gray-text);
+    margin-bottom: 10px;
+}
+
+.post-meta span {
+    margin-left: 15px; /* RTL: فاصله بین آیتم‌های متا */
+}
+.post-meta span:last-child {
+    margin-left: 0;
+}
+.post-meta i {
+    margin-left: 5px; /* RTL: فاصله آیکون از متن */
+    color: var(--secondary-color);
+}
+
+.post-title {
+    font-size: 1.6rem;
+    color: var(--light-text);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+.post-title a {
+    color: var(--light-text);
+}
+.post-title a:hover {
+    color: var(--primary-color);
+}
+
+.post-excerpt {
+    font-size: 0.95rem;
+    color: var(--gray-text);
+    line-height: 1.7;
+    margin-bottom: auto; /* باعث می‌شود دکمه ادامه مطلب به پایین کارت بچسبد */
+    padding-bottom: 15px; /* فاصله از دکمه ادامه مطلب */
+}
+
+.post-footer {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* برای گوشی‌های کوچک */
+    gap: 10px;
+}
+
+.post-tags {
+    font-size: 0.85rem;
+    color: var(--gray-text);
+}
+.post-tags span {
+    font-weight: 500;
+}
+.post-tags i {
+     margin-left: 3px;
+     color: var(--secondary-color);
+}
+.post-tags a {
+    color: var(--gray-text);
+    margin: 0 2px;
+}
+.post-tags a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Pagination Navigation */
+.pagination-nav {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+    padding-right: 0; /* RTL */
+    list-style: none;
+    border-radius: 0.25rem;
+}
+
+.page-item:not(:first-child) .page-link {
+    margin-right: 5px; /* RTL */
+}
+.page-item:first-child .page-link {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+     border-top-left-radius: 0; /* RTL */
+    border-bottom-left-radius: 0; /* RTL */
+}
+.page-item:last-child .page-link {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    border-top-right-radius: 0; /* RTL */
+    border-bottom-right-radius: 0; /* RTL */
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.6rem 0.9rem;
+    line-height: 1.25;
+    color: var(--primary-color);
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    font-family: var(--font-family-english); /* برای اعداد و فلش ها */
+}
+.page-link i { /* برای آیکون های داخل لینک صفحه بندی */
+    font-size: 0.8em;
+}
+
+.page-link:hover {
+    z-index: 2;
+    color: var(--dark-bg);
+    text-decoration: none;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: var(--dark-bg);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: bold;
+}
+
+.page-item.disabled .page-link {
+    color: var(--gray-text);
+    pointer-events: none;
+    cursor: auto;
+    background-color: var(--darker-bg);
+    border-color: var(--border-color);
+}
+
+
+/* Responsive adjustments for Blog Page */
+@media (min-width: 768px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr); /* دو ستونه در تبلت و دسکتاپ‌های کوچکتر */
+    }
+    /* اگر بخواهیم در تبلت پست‌ها کمی متفاوت باشند:
+    .blog-post-item {
+        flex-direction: row;
+    }
+    .post-thumbnail {
+        width: 40%;
+        aspect-ratio: auto;
+        height: auto;
+    }
+    .post-content {
+        width: 60%;
+    }
+    */
+}
+
+@media (min-width: 992px) {
+    /* .blog-grid {
+        grid-template-columns: repeat(3, 1fr); سه ستونه در دسکتاپ های بزرگتر، اگر کارت ها خیلی عریض نیستند
+    } */
+}
+.responsive-logo {
+    height: 90px;
+}
+
+/* مخفی کردن در موبایل و تبلت */
+@media (max-width: 991px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
+.main-nav ul li {
+    margin-left: 15px; /* فاصله بین آیتم‌ها از راست */
+}
+
+.main-nav ul li:last-child {
+    margin-left: 0; /* آخرین آیتم فاصله نداشته باشه */
+}

@@ -42,28 +42,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Optional: Smooth scroll for anchor links if you add any on the same page
-    // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    //     if (anchor.getAttribute('href') !== '#' && anchor.getAttribute('href') !== '#donate-link-placeholder') { // Exclude simple # and placeholder
-    //         anchor.addEventListener('click', function (e) {
-    //             const hrefAttribute = this.getAttribute('href');
-    //             // Ensure it's a valid ID selector and the element exists
-    //             if (hrefAttribute.startsWith('#') && hrefAttribute.length > 1) {
-    //                 try {
-    //                     const targetElement = document.querySelector(hrefAttribute);
-    //                     if (targetElement) {
-    //                         e.preventDefault();
-    //                         targetElement.scrollIntoView({
-    //                             behavior: 'smooth'
-    //                         });
-    //                     }
-    //                 } catch (error) {
-    //                     // Catch invalid selector errors, e.g., if href is like '#(some-text)'
-    //                     console.warn('Invalid selector for smooth scroll:', hrefAttribute, error);
-    //                 }
-    //             }
-    //         });
-    //     }
-    // });
+    // نمایش پیام موفقیت پس از ارسال فرم از طریق formsubmit.io
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('success') === 'true') {
+        const msg = document.createElement('div');
+        msg.textContent = 'پیام شما با موفقیت ارسال شد!';
+        msg.style.cssText = 'background-color:#00c7c7;color:#111;padding:15px;border-radius:5px;margin-bottom:25px;text-align:center;font-weight:bold;';
+        const form = document.getElementById('contact-form');
+        if (form) {
+            form.parentNode.insertBefore(msg, form);
+        }
+        // حذف ?success=true از URL پس از چند ثانیه
+        setTimeout(() => {
+            const url = new URL(window.location);
+            url.search = '';
+            window.history.replaceState({}, document.title, url);
+        }, 5000);
+    }
 
 });
