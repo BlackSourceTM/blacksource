@@ -1,0 +1,1121 @@
+/* style.css */
+:root {
+    --primary-color: #00c7c7; /* فیروزه‌ای */
+    --secondary-color: #0a8f8f;
+    --dark-bg: #1a1a1a; /* پس زمینه اصلی تیره */
+    --darker-bg: #111111; /* پس زمینه تیره‌تر برای برخی بخش‌ها */
+    --light-text: #f0f0f0; /* رنگ متن روشن */
+    --gray-text: #a0a0a0; /* رنگ متن خاکستری */
+    --card-bg: #252525; /* پس زمینه کارت‌ها */
+    --border-color: #333333;
+
+    --font-family-persian: 'Vazirmatn', sans-serif;
+    --font-family-english: 'Ubuntu', sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.7;
+
+    --container-width: 1140px;
+    --section-padding: 60px 0;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: var(--font-size-base);
+}
+
+body {
+    font-family: var(--font-family-persian);
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    line-height: var(--line-height-base);
+    direction: rtl; /* For Persian language */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-persian); /* Ensure headings use Persian font first */
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+h1 { font-size: 2.8rem; margin-bottom: 1.5rem; }
+h2 { font-size: 2.2rem; margin-bottom: 1.2rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.4rem; }
+
+p {
+    margin-bottom: 1rem;
+    color: var(--gray-text);
+}
+p.subtitle {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: var(--secondary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.section-padding {
+    padding: var(--section-padding);
+}
+.bg-darker {
+    background-color: var(--darker-bg);
+}
+.text-center {
+    text-align: center;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+.section-intro-text {
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: var(--light-text);
+}
+
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-family: var(--font-family-persian);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    border-color: var(--primary-color);
+}
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: #fff;
+}
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+}
+.btn-outline {
+    background-color: transparent;
+    color: var(--light-text);
+    border: 2px solid var(--gray-text);
+}
+.btn-outline:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+.btn-donate {
+    background-color: #ffc107; /* Gold color for donate */
+    color: var(--dark-bg);
+    margin-right: 10px; /* RTL margin */
+}
+.btn-donate:hover {
+    background-color: #e0a800;
+    color: var(--dark-bg);
+}
+.btn-donate i {
+    margin-right: 5px;
+}
+
+/* Header */
+header {
+    background-color: var(--darker-bg);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--light-text);
+}
+.logo .logo-en {
+    font-family: var(--font-family-english);
+    font-size: 0.7em;
+    color: var(--primary-color);
+    margin-left: 5px; /* RTL margin */
+}
+.logo:hover {
+    color: var(--light-text);
+}
+
+.main-nav ul {
+    display: flex;
+}
+.main-nav li {
+    margin-right: 25px; /* RTL margin */
+}
+.main-nav li:last-child {
+    margin-right: 0;
+}
+.main-nav a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--light-text);
+    padding: 5px 0;
+    position: relative;
+}
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+.main-nav a.active {
+    color: var(--primary-color);
+}
+
+.nav-toggle {
+    display: none; /* Hidden by default, shown on mobile */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+.hamburger {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 3px;
+    background: var(--light-text);
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--light-text);
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+.hamburger::before { top: -8px; }
+.hamburger::after { bottom: -8px; }
+
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x1080.png/1a1a1a/00c7c7?text=BlackSource+Cybersecurity') no-repeat center center/cover;
+    /* !کاربر گرامی: این یک تصویر پس‌زمینه موقت است. آن را با تصویر مناسب خودتان جایگزین کنید. */
+    /* example for local image: url('../assets/images/hero-bg.jpg') */
+    color: #fff;
+    padding: 120px 0;
+    text-align: center;
+}
+#hero h1 {
+    color: #fff;
+    font-size: 3.2rem;
+}
+#hero .subtitle {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+#hero .btn {
+    margin: 10px;
+}
+
+/* Intro Section */
+#intro .btn-outline {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Services Preview Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.service-item {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,199,199,0.1);
+}
+.service-item .icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+.service-item h3 {
+    color: var(--light-text);
+    margin-bottom: 10px;
+}
+
+/* Why Us Section */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.feature-item {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color); /* RTL: should be border-right */
+    border-right: 4px solid var(--primary-color); /* Correct for RTL */
+    border-left: none;
+}
+.feature-item .icon-feature {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: block;
+}
+.feature-item h4 {
+    color: var(--light-text);
+}
+
+/* Call to Action Blog Section */
+#cta-blog p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: var(--light-text);
+}
+
+/* Footer */
+footer {
+    background-color: var(--darker-bg);
+    color: var(--gray-text);
+    padding: 50px 0 20px 0;
+    border-top: 1px solid var(--border-color);
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.footer-about h4, .footer-links h4, .footer-contact h4 {
+    color: var(--light-text);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+.footer-about p {
+    font-size: 0.9rem;
+}
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+.footer-links ul li a {
+    color: var(--gray-text);
+    font-size: 0.95rem;
+}
+.footer-links ul li a:hover {
+    color: var(--primary-color);
+    padding-right: 5px; /* RTL hover effect */
+}
+.footer-contact p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+.footer-contact p i {
+    margin-left: 8px; /* RTL icon margin */
+    color: var(--primary-color);
+}
+.footer-contact a {
+    color: var(--gray-text);
+}
+.footer-contact a:hover {
+    color: var(--primary-color);
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+.social-icons a {
+    color: var(--gray-text);
+    font-size: 1.5rem;
+    margin-left: 15px; /* RTL margin */
+    transition: color 0.3s ease;
+}
+.social-icons a:last-child {
+    margin-left: 0;
+}
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 25px;
+    left: 25px; /* RTL: should be right, but often kept on one side globally */
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#back-to-top:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    h1 { font-size: 2.5rem; }
+    #hero h1 { font-size: 2.8rem; }
+    h2 { font-size: 2rem; }
+    .btn-donate { margin-right: 0; margin-top: 10px; display: block; text-align: center; }
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        position: relative; /* For positioning the toggle button within nav bounds */
+    }
+    .main-nav ul {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Position below the header */
+        right: 0; /* Align to the right */
+        background-color: var(--darker-bg);
+        width: 100%; /* Full width dropdown */
+        padding: 10px 0;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        border-top: 1px solid var(--border-color);
+    }
+    .main-nav ul.nav-active {
+        display: flex; /* Show when active */
+    }
+    .main-nav li {
+        margin-right: 0; /* Remove horizontal margin */
+        text-align: center;
+    }
+    .main-nav li a {
+        display: block; /* Make links take full width */
+        padding: 12px 20px; /* Add padding */
+        width: 100%;
+    }
+    .main-nav a::after {
+        display: none; /* Remove underline effect on mobile */
+    }
+     .main-nav a.active, .main-nav a:hover {
+        background-color: var(--primary-color);
+        color: var(--dark-bg);
+    }
+
+    .nav-toggle {
+        display: block; /* Show hamburger icon */
+        margin-right: 15px; /* Add some space for the donate button */
+    }
+    header .container {
+        flex-wrap: wrap; /* Allow items to wrap if donate button is too wide */
+        justify-content: space-between;
+    }
+    header .btn-donate {
+        order: 3; /* Ensure donate button is last if nav wraps */
+        width: auto; /* Adjust width if needed */
+        flex-basis: 100%; /* Make it full width if it wraps to a new line */
+        margin-top: 10px;
+    }
+    .nav-toggle.active .hamburger { background: transparent; }
+    .nav-toggle.active .hamburger::before { transform: rotate(45deg) translate(5px, 7px); }
+    .nav-toggle.active .hamburger::after { transform: rotate(-45deg) translate(5px, -7px); }
+
+    #hero { padding: 80px 0; }
+    #hero h1 { font-size: 2.2rem; }
+    #hero .subtitle { font-size: 1rem; }
+
+    .services-grid, .features-grid {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-content > div {
+        margin-bottom: 20px;
+    }
+    .social-icons a {
+        margin: 0 10px;
+    }
+     #back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        bottom: 15px;
+        left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    html { font-size: 15px; }
+    #hero h1 { font-size: 2rem; }
+    header .logo { font-size: 1.5rem; }
+}
+
+/* =============================================== */
+/* Styles for About Us Page (about.html)        */
+/* =============================================== */
+
+/* Page Header for inner pages like About Us */
+#page-header {
+    background-color: var(--darker-bg); /* یا هر رنگ/تصویر پس‌زمینه دیگر */
+    padding: 70px 0; /* همانند var(--section-padding) یا کمی بیشتر/کمتر */
+    text-align: center;
+}
+
+#page-header h1 {
+    color: var(--primary-color); /* یا #fff اگر شبیه هیرو اصلی باشد */
+    margin-bottom: 0.5rem;
+}
+
+/* .subtitle class is already defined and can be used here */
+
+/* About Content Section */
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* متن اصلی دو سوم، سایدبار یک سوم */
+    gap: 40px; /* فاصله بین متن و سایدبار */
+}
+
+.about-text p {
+    text-align: justify;
+    color: var(--light-text); /* متن اصلی کمی روشن‌تر از var(--gray-text) برای خوانایی بهتر */
+}
+
+.about-text strong {
+    color: var(--primary-color);
+}
+
+.about-text .logo-en { /* For BlackSource in English text */
+    font-family: var(--font-family-english);
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.section-title-small {
+    font-size: 1.9rem; /* کمی کوچکتر از h2 معمولی */
+    color: var(--light-text);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block; /* برای اینکه خط زیرین فقط به اندازه متن باشد */
+}
+.section-title-small:not(:first-child) {
+    margin-top: 30px; /* برای فاصله از پاراگراف قبلی اگر اولین عنوان کوچک نیست */
+}
+
+
+/* Styled List for services/features in about text */
+.styled-list {
+    list-style: none;
+    padding-right: 0; /* حذف پدینگ پیشفرض لیست در حالت RTL */
+    margin-bottom: 1.5rem;
+}
+
+.styled-list li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: flex-start; /* هم‌ترازی آیکون و متن */
+    color: var(--gray-text);
+}
+
+.icon-list {
+    color: var(--primary-color);
+    margin-left: 12px; /* فاصله آیکون از متن در RTL */
+    margin-top: 5px;   /* تنظیم دقیق‌تر عمودی آیکون */
+    font-size: 1.1em;
+    width: 20px; /* برای هم‌ترازی بهتر اگر آیکون‌ها عرض متفاوتی دارند */
+    text-align: center;
+}
+
+/* Sidebar */
+.about-sidebar .sidebar-widget {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.about-sidebar .sidebar-widget h3 {
+    font-size: 1.5rem; /* عنوان ویجت */
+    color: var(--light-text);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.contact-details-list {
+    list-style: none;
+    padding-right: 0;
+}
+
+.contact-details-list li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    color: var(--gray-text);
+}
+.contact-details-list li a {
+    color: var(--gray-text);
+}
+.contact-details-list li a:hover {
+    color: var(--primary-color);
+}
+
+
+.icon-contact {
+    color: var(--primary-color);
+    margin-left: 10px; /* فاصله آیکون از متن در RTL */
+    font-size: 1.1rem;
+    width: 20px; /* برای هم‌ترازی بهتر */
+}
+
+/* Social Icons in Sidebar (if styling needs to be different from footer) */
+.social-icons-about {
+    margin-top: 15px;
+    text-align: right; /* یا center اگر مایلید */
+}
+.social-icons-about a {
+    color: var(--gray-text);
+    font-size: 1.6rem; /* کمی بزرگتر برای تاکید بیشتر در سایدبار */
+    margin-left: 18px; /* فاصله بین آیکون‌ها در RTL */
+    transition: color 0.3s ease;
+}
+.social-icons-about a:last-child {
+    margin-left: 0;
+}
+.social-icons-about a:hover {
+    color: var(--primary-color);
+}
+
+/* Utility classes (add if not already present or adjust as needed) */
+.margin-top-large {
+    margin-top: 40px !important; /* Use !important if overriding other margins is necessary */
+}
+.margin-top-medium {
+    margin-top: 20px !important;
+}
+
+.btn-fullwidth {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    color: var(--gray-text);
+    line-height: 1.5;
+}
+
+/* Team Preview Section (placeholder styles) */
+#team-preview .section-intro-text { /* Re-using existing class if appropriate */
+    color: var(--light-text); /* Ensure good contrast on bg-darker */
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member {
+    background-color: var(--card-bg); /* Using var(--card-bg) from your style.css */
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,199,199,0.08);
+}
+
+.team-member-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px auto; /* Center image */
+    border: 3px solid var(--primary-color);
+    display: block;
+}
+
+.team-member h4 {
+    color: var(--light-text);
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+.team-member p {
+    font-size: 0.95rem;
+    color: var(--gray-text);
+}
+
+
+/* Responsive adjustments for About Page */
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr; /* ستون‌ها روی هم در تبلت و موبایل */
+    }
+    .about-sidebar {
+        margin-top: 40px; /* فاصله سایدبار از متن اصلی در حالت تک ستونه */
+    }
+    #page-header {
+        padding: 50px 0;
+    }
+    #page-header h1 {
+        font-size: 2.2rem; /* Adjust as per existing h1 in this breakpoint */
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title-small {
+        font-size: 1.7rem;
+    }
+    .about-sidebar .sidebar-widget h3 {
+        font-size: 1.4rem;
+    }
+    .social-icons-about a {
+        font-size: 1.5rem;
+        margin-left: 15px;
+    }
+    .team-member-img {
+        width: 110px;
+        height: 110px;
+    }
+}
+/* =============================================== */
+/* Styles for Services Page (services.html)     */
+/* =============================================== */
+
+#services-detailed .services-detailed-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */ /* برای نمایش کنار هم در صفحات بزرگتر */
+    grid-template-columns: 1fr; /* هر سرویس در یک ردیف برای تمرکز بیشتر */
+    gap: 40px; /* فاصله بین بلوک های خدمات */
+}
+
+.service-detail-item {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* برای چیدمان داخلی */
+}
+
+.service-detail-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,199,199,0.08);
+}
+
+.service-item-icon {
+    font-size: 3.5rem; /* اندازه بزرگتر آیکون */
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center; /* یا راست چین اگر مایلید: text-align: right; */
+}
+
+.service-item-title {
+    font-size: 1.8rem; /* عنوان هر سرویس */
+    color: var(--light-text);
+    margin-bottom: 15px;
+    text-align: center; /* یا راست چین */
+}
+
+.service-item-description {
+    font-size: 1rem;
+    color: var(--gray-text);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.service-detail-item h4 {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.service-features-list {
+    list-style: none;
+    padding-right: 0;
+    margin-bottom: 20px;
+}
+
+.service-features-list li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    color: var(--gray-text);
+    font-size: 0.95rem;
+}
+
+.feature-icon { /* آیکون کنار ویژگی های لیست */
+    color: var(--secondary-color); /* یا --primary-color */
+    margin-left: 10px; /* فاصله آیکون از متن در RTL */
+    font-size: 1em;
+}
+
+.btn-small { /* برای دکمه‌های کوچکتر در کارت‌ها */
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+
+/* Call to Action section for services page */
+#services-cta .section-title {
+    color: var(--light-text); /* برای خوانایی بهتر روی پس‌زمینه تیره‌تر */
+}
+#services-cta .section-title::after{
+    background-color: var(--light-text); /* یا --primary-color */
+}
+
+/* Responsive adjustments for Services Page */
+@media (min-width: 769px) and (max-width: 1100px) {
+    #services-detailed .services-detailed-grid {
+        /* اگر بخواهید در تبلت دو ستونه شود: */
+        /* grid-template-columns: repeat(2, 1fr); */
+    }
+}
+
+@media (min-width: 1101px) {
+     #services-detailed .services-detailed-grid {
+        /* برای نمایش دو ستونه در دسکتاپ اگر محتوا خیلی طولانی نیست */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .service-detail-item {
+         padding: 25px;
+    }
+}
+/* =============================================== */
+/* Styles for Blog Page (blog.html)             */
+/* =============================================== */
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* تک ستونه در موبایل */
+    gap: 35px;
+}
+
+.blog-post-item {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden; /* برای اینکه border-radius روی تصویر هم اعمال شود */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,199,199,0.07);
+}
+
+.post-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* برای حفظ نسبت تصویر */
+    overflow: hidden;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* تصویر کامل کادر را بپوشاند بدون تغییر نسبت */
+    transition: transform 0.4s ease;
+}
+
+.blog-post-item:hover .post-thumbnail img {
+    transform: scale(1.05); /* افکت زوم کوچک روی هاور */
+}
+
+.post-content {
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* محتوا فضای باقی‌مانده کارت را پر کند */
+}
+
+.post-meta {
+    font-size: 0.85rem;
+    color: var(--gray-text);
+    margin-bottom: 10px;
+}
+
+.post-meta span {
+    margin-left: 15px; /* RTL: فاصله بین آیتم‌های متا */
+}
+.post-meta span:last-child {
+    margin-left: 0;
+}
+.post-meta i {
+    margin-left: 5px; /* RTL: فاصله آیکون از متن */
+    color: var(--secondary-color);
+}
+
+.post-title {
+    font-size: 1.6rem;
+    color: var(--light-text);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+.post-title a {
+    color: var(--light-text);
+}
+.post-title a:hover {
+    color: var(--primary-color);
+}
+
+.post-excerpt {
+    font-size: 0.95rem;
+    color: var(--gray-text);
+    line-height: 1.7;
+    margin-bottom: auto; /* باعث می‌شود دکمه ادامه مطلب به پایین کارت بچسبد */
+    padding-bottom: 15px; /* فاصله از دکمه ادامه مطلب */
+}
+
+.post-footer {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* برای گوشی‌های کوچک */
+    gap: 10px;
+}
+
+.post-tags {
+    font-size: 0.85rem;
+    color: var(--gray-text);
+}
+.post-tags span {
+    font-weight: 500;
+}
+.post-tags i {
+     margin-left: 3px;
+     color: var(--secondary-color);
+}
+.post-tags a {
+    color: var(--gray-text);
+    margin: 0 2px;
+}
+.post-tags a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Pagination Navigation */
+.pagination-nav {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+    padding-right: 0; /* RTL */
+    list-style: none;
+    border-radius: 0.25rem;
+}
+
+.page-item:not(:first-child) .page-link {
+    margin-right: 5px; /* RTL */
+}
+.page-item:first-child .page-link {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+     border-top-left-radius: 0; /* RTL */
+    border-bottom-left-radius: 0; /* RTL */
+}
+.page-item:last-child .page-link {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    border-top-right-radius: 0; /* RTL */
+    border-bottom-right-radius: 0; /* RTL */
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.6rem 0.9rem;
+    line-height: 1.25;
+    color: var(--primary-color);
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    font-family: var(--font-family-english); /* برای اعداد و فلش ها */
+}
+.page-link i { /* برای آیکون های داخل لینک صفحه بندی */
+    font-size: 0.8em;
+}
+
+.page-link:hover {
+    z-index: 2;
+    color: var(--dark-bg);
+    text-decoration: none;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: var(--dark-bg);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: bold;
+}
+
+.page-item.disabled .page-link {
+    color: var(--gray-text);
+    pointer-events: none;
+    cursor: auto;
+    background-color: var(--darker-bg);
+    border-color: var(--border-color);
+}
+
+
+/* Responsive adjustments for Blog Page */
+@media (min-width: 768px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr); /* دو ستونه در تبلت و دسکتاپ‌های کوچکتر */
+    }
+    /* اگر بخواهیم در تبلت پست‌ها کمی متفاوت باشند:
+    .blog-post-item {
+        flex-direction: row;
+    }
+    .post-thumbnail {
+        width: 40%;
+        aspect-ratio: auto;
+        height: auto;
+    }
+    .post-content {
+        width: 60%;
+    }
+    */
+}
+
+@media (min-width: 992px) {
+    /* .blog-grid {
+        grid-template-columns: repeat(3, 1fr); سه ستونه در دسکتاپ های بزرگتر، اگر کارت ها خیلی عریض نیستند
+    } */
+}
+.responsive-logo {
+    height: 90px;
+}
+
+/* مخفی کردن در موبایل و تبلت */
+@media (max-width: 991px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
+.main-nav ul li {
+    margin-left: 15px; /* فاصله بین آیتم‌ها از راست */
+}
+
+.main-nav ul li:last-child {
+    margin-left: 0; /* آخرین آیتم فاصله نداشته باشه */
+}
