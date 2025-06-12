@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="سند فنی رسمی (White Paper) نرم‌افزار Advanced Secure Information System (ASIS)، شامل تحلیل جامع ساختار امنیتی، اصول رمزنگاری و منطق مهندسی عملکردی.">
+    <meta name="keywords" content="ASIS, Advanced Secure Information System, White Paper, سند فنی, امنیت اطلاعات, رمزنگاری, منبع سیاه, BlackSource, علی رحیمی کیاسری">
+    <title>سند فنی رسمی نرم‌افزار ASIS - منبع سیاه | BlackSource</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* A simple style for the ASIS logo */
+        .asis-logo {
+            max-width: 200px;
+            height: auto;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">منبع سیاه <span class="logo-en">BlackSource</span></a>
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <ul>
+                    <li><a href="index.html">صفحه اصلی</a></li>
+                    <li><a href="about.html">درباره ما</a></li>
+                    <li><a href="services.html" class="active">خدمات</a></li>
+                    <li><a href="blog.html">وبلاگ</a></li>
+                    <li><a href="contact.html">تماس با ما</a></li>
+                </ul>
+            </nav>
+            <img src="BlackSource.png" alt="BlackSource Logo" class="desktop-only" style="height: 90px;">
+        </div>
+    </header>
+
+    <main>
+        <section id="page-header" class="section-padding">
+            <div class="container text-center">
+                <h1>سند فنی نرم‌افزار ASIS</h1>
+                <img src="banner.png" alt="ASIS Software Logo" class="asis-logo">
+                <p class="subtitle">تحلیل جامع ساختار امنیتی، اصول رمزنگاری و منطق مهندسی عملکردی نرم‌افزار Advanced Secure Information System</p>
+                <p class="small-text" style="color: var(--gray-text);">نوع سند: سند فنی رسمی بین‌المللی (White Paper) | تنظیم‌شده توسط: علی رحیمی کیاسری، محقق امنیت سایبری | تاریخ آخرین به‌روزرسانی: 2025/06/12</p>
+            </div>
+        </section>
+
+        <section id="service-content" class="section-padding">
+            <div class="container">
+                <div class="about-text"> <h3 class="section-title-small">بخش اول: مقدمه تخصصی</h3>
+                    <p>نرم‌افزار <strong>Advanced Secure Information System (ASIS)</strong> نه صرفاً یک ابزار رمزنگاری، بلکه یک زیرساخت سایبری بومی و مهندسی‌شده برای تضمین حداکثری حریم خصوصی دیجیتال کاربران است؛ سیستمی که با رعایت اصول رمزنگاری کلاسیک، رمزنگاری نوین و معماری امنیت عملیاتی (OpSec)، در سطحی بالاتر از استانداردهای امنیتی تجاری پیاده‌سازی شده است. این نرم‌افزار با اتکا بر اصل «امنیت مطلق مبتنی بر انحصار سخت‌افزاری و شخصی‌سازی در زمان ساخت»، برای محافظت از داده‌های فوق‌حساس طراحی شده و از هرگونه وابستگی به ساختارهای ذخیره‌سازی یا شبکه‌ای پرهیز می‌کند.</p>
+
+                    <hr style="border-color: var(--border-color); margin: 40px 0;">
+
+                    <h3 class="section-title-small margin-top-large">بخش دوم: اصول طراحی و فلسفه امنیتی</h3>
+                    
+                    <h4>2.1 اصل شخصی‌سازی مطلق (Absolute Personalization)</h4>
+                    <p>هر نسخه از نرم‌افزار بر اساس اطلاعات سخت‌افزاری غیرقابل جعل (مانند سریال مادربرد، MAC آدرس، CPU ID و...) و اطلاعات ورود اختصاصی کاربر، در لحظه تولید برای یک سیستم خاص کامپایل می‌گردد. هیچ نسخه‌ای قابلیت اجرا در سیستمی غیر از آنچه مشخص شده را ندارد.</p>
+
+                    <h4>2.2 اصل انکارپذیری منطقی (Plausible Deniability)</h4>
+                    <p>نرم‌افزار فاقد هرگونه فایل پیکربندی، کلید رمزنگاری ذخیره‌شده، رمز عبور، یا logهای محلی است. لذا در مواجهه با تحلیل‌های قضایی یا امنیتی، حتی توسعه‌دهنده نیز قادر به بازیابی یا تأیید اطلاعات کاربر نخواهد بود. این ویژگی مشابه ساختار سیستم‌هایی چون Tails OS و VeraCrypt طراحی شده است.</p>
+
+                    <h4>2.3 اصل استقلال کامل از بسترهای بیرونی (Full Offline Trust Model)</h4>
+                    <p>نرم‌افزار هیچ‌گونه ارتباط شبکه‌ای، بروزرسانی آنلاین، یا وابستگی به API خارجی ندارد. بر خلاف مدل‌های Client-Server، این سیستم به‌طور کامل به محیط بسته کاربر وابسته است و اجرا تنها در صورت غیرفعال بودن کلیه پروتکل‌های ارتباطی (Internet، Bluetooth، NFC، Location Services) ممکن خواهد بود.</p>
+
+                    <hr style="border-color: var(--border-color); margin: 40px 0;">
+
+                    <h3 class="section-title-small margin-top-large">بخش سوم: ساختار رمزنگاری و الگوریتمی</h3>
+                    
+                    <h4>3.1 الگوریتم‌های استفاده‌شده:</h4>
+                    <ul class="styled-list">
+                        <li><i class="fas fa-shield-halved icon-list"></i><strong>AES-256-GCM:</strong> رمزنگاری متقارن سریع و مقاوم در برابر حملات زمان‌بندی</li>
+                        <li><i class="fas fa-key icon-list"></i><strong>RSA-4096:</strong> رمزنگاری نامتقارن برای مبادله کلید اولیه، مشابه مدل‌های استفاده‌شده در VeraCrypt</li>
+                        <li><i class="fas fa-stream icon-list"></i><strong>XChaCha20-Poly1305:</strong> الگوریتم جریان‌محور با تأخیر کم و قدرت بالا در محیط‌های محدود منابع (مانند Signal Protocol)</li>
+                        <li><i class="fas fa-cogs icon-list"></i><strong>توابع هش و مشتق کلید سفارشی:</strong> توسعه اختصاصی الگوریتم KDF و Hash جهت مقاوم‌سازی در برابر حملات مبتنی بر داده‌های از پیش شناخته‌شده (pre-image/resistance)</li>
+                    </ul>
+
+                    <h4>3.2 ساختار اشتقاق کلید (Key Derivation Schema)</h4>
+                    <p>کلید اصلی رمزنگاری در لحظه اجرا، با ترکیب داده‌های زیر و استفاده از تابع KDF اختصاصی تولید می‌شود:</p>
+                    <ul class="styled-list">
+                        <li><i class="fas fa-keyboard icon-list"></i>رمز عبور کاربر (ورودی مستقیم)</li>
+                        <li><i class="fas fa-microchip icon-list"></i>پارامترهای سخت‌افزاری ثابت (مادربرد، CPU، MAC)</li>
+                        <li><i class="fas fa-usb icon-list"></i>شماره سریال فلش مموری</li>
+                        <li><i class="fas fa-calendar-alt icon-list"></i>تاریخ و ساعت اولین ساخت نرم‌افزار (به‌عنوان non-repeating salt)</li>
+                    </ul>
+
+                    <hr style="border-color: var(--border-color); margin: 40px 0;">
+
+                    <h3 class="section-title-small margin-top-large">بخش چهارم: احراز هویت، قفل سخت‌افزاری، و زمان‌بندی دسترسی</h3>
+
+                    <h4>4.1 مراحل ورود و اعتبارسنجی:</h4>
+                     <ul class="styled-list">
+                        <li><i class="fas fa-user-lock icon-list"></i>ورود نام کاربری و رمز عبور شخصی</li>
+                        <li><i class="fas fa-robot icon-list"></i>حل یک CAPTCHA پیچیده برای جلوگیری از اجرای خودکار توسط ربات‌ها</li>
+                        <li><i class="fas fa-check-double icon-list"></i>تأیید سخت‌افزاری کامل: مطابقت شناسه‌های مادربرد، CPU، MAC و سریال فلش مموری</li>
+                        <li><i class="fas fa-clock icon-list"></i>در صورت صحت، دسترسی موقت ۳۰ دقیقه‌ای صادر می‌شود. پس از آن، نرم‌افزار قفل شده و برای ادامه نیاز به احراز مجدد دارد</li>
+                    </ul>
+
+                    <h4>4.2 منطق زمانی و نظارت پویا:</h4>
+                    <p>هدف از محدودسازی زمان دسترسی، جلوگیری از سوء‌استفاده از نرم‌افزار در غیاب کاربر (مثلاً هنگامی که کاربر سیستم را ترک کرده یا در حالت خواب است) می‌باشد.</p>
+
+                    <h4>4.3 مکانیسم خودتخریبی (Self-Destruct Mechanism):</h4>
+                    <p>نرم‌افزار به طور پیوسته محیط اجرایی خود را پایش می‌کند. در صورتی که تشخیص دهد در یک محیط شبیه‌سازی شده (Virtual Machine) یا Sandbox در حال اجراست، یا پس از ۳ بار ورود متوالی رمز عبور اشتباه توسط کاربر، بلافاصله وارد حالت خودتخریبی شده و کلیه مسیرهای دسترسی به داده‌های رمز شده را به‌صورت برگشت‌ناپذیر از بین می‌برد.</p>
+
+                    <hr style="border-color: var(--border-color); margin: 40px 0;">
+
+                    <h3 class="section-title-small margin-top-large">بخش پنجم: سیاست پوششی (Camouflage Protocol) و اجتناب از برانگیختن حساسیت</h3>
+
+                    <h4>5.1 الزام به بلاک شبکه:</h4>
+                    <p>کاربر موظف است در زمان اجرای نرم‌افزار، دسترسی اینترنت آن را به‌صورت دستی در فایروال مسدود نماید. در عین حال، نرم‌افزار با استفاده از دستورات سطح سیستم (کتابخانه os) صحت این بلاک بودن را بررسی و در صورت نبود آن، هشدار امنیتی صادر می‌کند.</p>
+
+                    <h4>5.2 در صورت اتصال ناخواسته:</h4>
+                    <p>برنامه وارد حالت پوششی می‌شود و با اجرای یک رابط گرافیکی شبیه نرم‌افزارهای عمومی (مثلاً نمایش وضعیت آب‌وهوا)، از شناسایی توسط مهاجم حرفه‌ای جلوگیری می‌کند.</p>
+                    
+                    <hr style="border-color: var(--border-color); margin: 40px 0;">
+
+                    <h3 class="section-title-small margin-top-large">بخش ششم: روش‌های ذخیره‌سازی مخفیانه و جلوگیری از ردیابی</h3>
+
+                    <h4>6.1 روش‌های پنهان‌سازی:</h4>
+                    <ul class="styled-list">
+                        <li><i class="fas fa-hdd icon-list"></i>ذخیره در فضای غیرمجاز دیسک (Unallocated Space)</li>
+                        <li><i class="fas fa-file-alt icon-list"></i>تعویض ساختار فایل‌های سیستمی جعلی (مانند hiberfil.sys یا pagefile.sys)</li>
+                        <li><i class="fas fa-image icon-list"></i>استگانوگرافی پیشرفته در فایل‌های رسانه‌ای (مشابه ابزارهایی چون Steghide با الگوریتم سفارشی)</li>
+                    </ul>
+
+                    <h4>6.2 پاک‌سازی مطلق:</h4>
+                    <p>هرگونه فایل موقت، حافظه کش یا مسیر استفاده‌شده پس از خروج از برنامه با استفاده از الگوریتم Secure Delete به‌طور برگشت‌ناپذیر پاک می‌شود.</p>
+
+                    <hr style="border-color: var(--border-color); margin: 40px 0;">
+
+                    <h3 class="section-title-small margin-top-large">بخش هفتم: تولید و توزیع به‌صورت End-to-End اختصاصی</h3>
+
+                    <h4>7.1 فرآیند ساخت:</h4>
+                    <p>کاربر پس از پرداخت اینترنتی امن (End-to-End Payment)، اطلاعات سخت‌افزاری را از طریق یک ابزار رمزنگاری‌شده ارسال می‌کند. توسعه‌دهنده پس از بررسی اطلاعات، نسخه‌ای سفارشی و اختصاصی از نرم‌افزار را برای همان سیستم کامپایل کرده و از طریق ایمیل ایمن تحویل می‌دهد.</p>
+
+                    <h4>7.2 توجه حقوقی:</h4>
+                    <p>هیچ نسخه‌ای از کلید، اطلاعات کاربر، یا فایل‌های رمزنگاری‌شده نزد توسعه‌دهنده باقی نمی‌ماند. در صورت مفقودی فلش مموری یا فراموشی رمز عبور، <strong>بازگردانی اطلاعات از نظر فنی و حقوقی غیرممکن است.</strong></p>
+
+                    <hr style="border-color: var(--border-color); margin: 40px 0;">
+
+                    <h3 class="section-title-small margin-top-large">بخش هشتم: پاسخ به دغدغه‌ها و شبهات رایج</h3>
+                    
+                    <h4>آیا این نرم‌افزار ابزار جاسوسی یا نظامی محسوب می‌شود؟</h4>
+                    <p><strong>خیر.</strong> نرم‌افزار کاملاً آفلاین بوده و هیچ‌گونه تبادل داده‌ای ندارد. همچنین سازوکار توزیع آن کنترل‌شده است و از طریق GitHub یا دیگر بسترهای عمومی در دسترس نیست.</p>
+
+                    <h4>چرا این سطح از رمزنگاری سنگین استفاده شده است؟</h4>
+                    <p>هدف اصلی، حفاظت از اطلاعات کاربران در بدترین سناریوهای امنیتی است. همانند BitLocker یا VeraCrypt، این سطوح رمزنگاری برای مقابله با مهاجمان دارای دسترسی فیزیکی به سیستم طراحی شده‌اند.</p>
+
+                    <h4>آیا توسعه‌دهنده به فایل‌های کاربر دسترسی دارد؟</h4>
+                    <p><strong>خیر.</strong> ساختار نرم‌افزار به‌گونه‌ای است که پس از تولید نسخه شخصی‌شده، حتی سازنده نیز به هیچ بخشی از داده‌های رمزگذاری‌شده یا کلید دسترسی ندارد.</p>
+
+                    <h4>آیا می‌توان از نرم‌افزار برای مقاصد غیرقانونی استفاده کرد؟</h4>
+                    <p>هر ابزار تکنولوژیک قابلیت استفاده قانونی و غیرقانونی دارد. با این حال، ساختار قفل سخت‌افزاری، نیاز به فلش خاص، و نحوه توزیع کنترل‌شده، امکان استفاده در فعالیت‌های غیرمجاز را به‌شدت محدود می‌کند.</p>
+
+                    <hr style="border-color: var(--border-color); margin: 40px 0;">
+
+                    <h3 class="section-title-small margin-top-large">بخش نهم: ملاحظات حقوقی و مالکیت معنوی</h3>
+                    <p><strong>هر گونه کپی‌برداری، مهندسی معکوس، تلاش برای بازتولید منطق نرم‌افزار، نقض حق مالکیت مادی یا معنوی و دور زدن قوانین استفاده از نرم‌افزار مطلقاً ممنوع است. تیم تحقیق و توسعه امنیت سایبری منبع سیاه، حق پیگیری قانونی و قضایی علیه هرگونه نقض این اصول را در داخل و خارج از کشور برای خود محفوظ می‌دارد.</strong></p>
+
+                    <hr style="border-color: var(--border-color); margin: 40px 0;">
+
+                    <h3 class="section-title-small margin-top-large">نتیجه‌گیری نهایی</h3>
+                    <p><strong>Advanced Secure Information System (ASIS)</strong>، نمونه‌ای نادر از ترکیب فلسفه امنیت سایبری، اصول رمزنگاری مدرن، و مهندسی دفاعی سطح بالا در یک محصول واحد است. این نرم‌افزار نه یک ابزار عمومی، بلکه یک زیرساخت خصوصی رمزنگاری‌شده با سطح امنیت اطلاعاتی (Intelligence-grade Security) است که تنها برای کاربر نهایی قابل استفاده بوده و هیچ‌گونه راه نفوذ، بازیابی، یا مهندسی معکوس مؤثری برای آن باقی نگذاشته شده است.</p>
+                    <p>این سند جهت بررسی فنی تخصصی تدوین شده و نسخه راهنمای عمومی کاربران در سند جداگانه ارائه خواهد شد.</p>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h4>منبع سیاه (<span class="logo-en">BlackSource</span>)</h4>
+                    <p style="text-align: justify";>هدف ما ایجاد فضایی امن‌تر در دنیای دیجیتال است.</p>
+                    <p style="text-align: justify";>شماره ثبت مجوز: I234966 (وزارت کار، تعاون و رفاه اجتماعی)</p>
+                </div>
+                <div class="footer-links">
+                    <h4>لینک‌های مفید</h4>
+                    <ul>
+                        <li><a href="about.html">درباره ما</a></li>
+                        <li><a href="services.html">خدمات</a></li>
+                        <li><a href="blog.html">وبلاگ</a></li>
+                        <li><a href="contact.html">تماس با ما</a></li>
+                        <li><a href="https://zarinp.al/716274">حمایت مالی</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>ارتباط با ما</h4>
+                    <p style="text-align: justify";><i class="fas fa-phone"></i> <a href="tel:+989117335899" dir="ltr">+۹۸ ۹۱۱ ۷۳۳ ۵۸۹۹</a></p>
+                    <p style="text-align: justify";><i class="fas fa-envelope"></i> <a href="mailto:support@blacksource.tech">support@blacksource.tech</a></p>
+                    <div class="social-icons">
+                        <a href="https://t.me/BlackSource_tech" target="_blank" aria-label="تلگرام"><i class="fab fa-telegram"></i></a>
+                        <a href="https://instagram.com/BlackSource.tech" target="_blank" aria-label="اینستاگرام"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/BlackSourceTM" target="_blank" aria-label="گیت‌هاب"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; تمام حقوق مادی و معنوی این سایت و متعلقات آن برای تیم تحقیق و توسعه امنیت سایبری منبع سیاه محفوظ است. (کپی با ذکر منبع مانعی ندارد)</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="بازگشت به بالا"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>
